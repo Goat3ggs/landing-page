@@ -1,0 +1,143 @@
+:root {
+    /*Primary*/
+
+--soft-red: hsl(7, 99%, 70%);
+--yellow: hsl(51, 100%, 49%);
+--dark-desaturated-cyan: hsl(167, 40%, 24%); /* (graphic design text)*/
+--dark-blue: hsl(198, 62%, 26%); /* (photography text)*/
+--dark-moderate-cyan: hsl(168, 34%, 41%); /*(footer)*/
+
+    /*Neutral*/
+
+--very-dark-desaturated-blue: hsl(212, 27%, 19%);
+--very-dark-grayish-blue: hsl(213, 9%, 39%);
+--dark-grayish-blue: hsl(232, 10%, 55%);
+--grayish-blue: hsl(210, 4%, 67%);
+--white: hsl(0, 0%, 100%);
+
+--fs-small: 0.875rem; /*14px*/
+--fs-default: 1.125rem; /*18px*/
+--fs-large: 1.25rem; /*20px*/
+
+--ff-barlow: "Barlow", sans-serif;
+--ff-fraunces: "Fraunces", serif;
+
+--fw-barlow-6: 600;
+--fw-fraunces-7: 700;
+--fw-fraunces-9: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    font: inherit;
+    margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+/*
+  5. Improve media defaults
+*/
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1 {
+    overflow-wrap: break-word;
+}
+
+body {
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-default);
+    color: var(--grayish-blue);
+    min-height: 100vh;
+}
+.header {
+    padding: 2.5rem;
+    background-image: url(images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+.navbar-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+}
+.flex a {
+    text-decoration: none;
+    color: var(--white);
+}
+.general-btn {
+    cursor: pointer;
+    border: none;
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-fraunces-7);
+    text-transform: uppercase;
+}
+.contact-btn {
+    background-color: var(--white);
+    color:hsl(212, 27%, 19%);
+    padding: .7rem 1.25rem;
+    font-weight: 700;
+    border-radius: 50vw;
+    font-size: .8rem;
+    /* Put the trnasition on the button propertyes, not on the hover effect */
+    transition: .3s;
+}
+.contact-btn:hover {
+    background: hsla(0, 0%, 100%, 0.37);
+    color: hsl(0, 0%, 100%);
+}
+.header-text .arrow{
+    position: absolute;
+    margin: auto;
+    top: 45%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 1;
+}
+.primary-heading {
+    font-weight: var(--fw-fraunces-9);
+    font-family: var(--ff-fraunces);
+    color: hsl(0, 0%, 100%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    margin: 4rem;
+    
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
