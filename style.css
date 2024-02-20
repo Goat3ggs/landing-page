@@ -35,7 +35,6 @@
 *::after {
     box-sizing: border-box;
 }
-
 /*
   2. Remove default margin
 */
@@ -43,7 +42,6 @@
     font: inherit;
     margin: 0;
 }
-
 /*
   Typographic tweaks!
   3. Add accessible line-height
@@ -53,7 +51,6 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
-
 /*
   5. Improve media defaults
 */
@@ -61,25 +58,24 @@ img, svg {
     display: block;
     max-width: 100%;
 }
-
 p,
 h1 {
     overflow-wrap: break-word;
 }
-
 body {
     font-family: var(--ff-barlow);
     font-size: var(--fs-default);
     color: var(--grayish-blue);
-    min-height: 100vh;
 }
-.header {
+/***********Headear section starts***********/
+/***********Headear section starts***********/
+.hero {
+    height: 100vh;
     padding: 2.5rem;
     background-image: url(images/desktop/image-header.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
-    height: 100vh;
 }
 .navbar-row {
     display: flex;
@@ -97,11 +93,13 @@ body {
     color: var(--white);
 }
 .general-btn {
-    cursor: pointer;
-    border: none;
     font-family: var(--ff-fraunces);
     font-weight: var(--fw-fraunces-7);
     text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    border: none;
+    padding: 0;
 }
 .contact-btn {
     background-color: var(--white);
@@ -141,3 +139,129 @@ body {
     right: 0;
     text-align: center;
 }
+/***********Headear section Ends***********/
+
+/***********Features section starts***********/
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.features article {
+    flex-basis: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.left-side {
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+.content {
+    max-width: 50%;
+}
+.left-side h2 {
+    color: var(--very-dark-desaturated-blue);
+    font-weight: var(--fw-fraunces-9);
+    font-family: var(--ff-fraunces);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+.left-side p {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.left-side a {
+    color: var(--very-dark-desaturated-blue);
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-fraunces-9);
+    /* border-bottom: 3px solid hsl(60, 100%, 50%); */
+    padding: 0 .5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+.left-side a::before {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+    height: .6rem;
+    background: rgba(255, 255, 45, 0.548);
+    z-index: -1;
+    border-radius: .5rem;
+    transition: .35s;
+
+}
+.left-side a:hover::before {
+    background: var(--yellow);
+}
+.features article .right-side {
+    flex-basis: 50%;
+    overflow: hidden;
+    height: 100%;
+}
+.features article .right-side picture {
+    width: 100%;
+    height: 100%;
+} 
+.right-side picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.features article:nth-child(2) .left-side .content a::before {
+    background: hsla(7, 99%, 70%, 0.342);
+}
+.features article:nth-child(2) .left-side .content a:hover::before {
+    background: var(--soft-red);
+}
+.features article:nth-child(3) .left-side{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size:cover;
+    position: relative;
+}
+.features article:nth-child(3) .left-side .content {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    max-width: 45%;
+}
+.features article:nth-child(3) .left-side .content p{
+    font-size: var(--fs-small);
+}
+.h3-heading {
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-fraunces-7);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.design {
+    color: var(--dark-desaturated-cyan);
+}
+.design-p {
+    color: var(--dark-moderate-cyan);
+}
+.features article:nth-child(3) .left-side:nth-child(2){
+    background-image: url(images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.photo {
+    color:var(--very-dark-desaturated-blue);
+}
+.photo-p {
+    color: var(--dark-blue);
+}
+/***********Features section Ends***********/
