@@ -145,7 +145,7 @@ body {
 .features {
     display: flex;
     flex-wrap: wrap;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 .features article {
     flex-basis: 100%;
@@ -219,7 +219,16 @@ body {
     object-fit: cover;
 }
 .features article:nth-child(2) .left-side .content a::before {
+    content: "";
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
     background: hsla(7, 99%, 70%, 0.342);
+    z-index: -1;
+    border-radius: .5rem;
+    transition: .35s;
+
 }
 .features article:nth-child(2) .left-side .content a:hover::before {
     background: var(--soft-red);
